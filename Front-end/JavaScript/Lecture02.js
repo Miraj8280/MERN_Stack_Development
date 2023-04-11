@@ -35,7 +35,6 @@
                     }; 
 */
 
-
 /*------------------------------------------------------------------------
                     Variables in JavaScript
 --------------------------------------------------------------------------
@@ -52,15 +51,53 @@
 /*------------------------------------------------------------------------
                         var
 --------------------------------------------------------------------------
-    => It is a very old (1995 - 2015) keyword.
-    => Use let or const instead of var.
+    1. It is a very old (1995 - 2015) keyword.
+    2. Variables defined with var can be redeclared.
+    3. Variables defined with var can be declared after use.
+    4. Variables defined with var can't have block scope => Variables declared inside a { } block can be accessed from outside the block
 */
 
-       var a = 20;
-       var b = 30;
-       var sum = a + b;
+// ================= Redeclarable ====================
+var a = 20;
+var b = 30;
+var sum = a + b;
 
-    //    console.log( sum );
+var a = 30;
+var b = 50;
+var sum = a + b;
+
+// console.log(sum);
+
+
+// ================ Can be declared after use ============
+z = 10;
+u = 30;
+mul = z * u;
+
+var z;
+var u;
+
+// console.log(mul);
+
+var mul;
+
+
+// =============== Not block scope ======================
+// global scope
+{
+    // block scope
+    var two = 2;
+}
+// can be use here
+// console.log(two);
+
+
+{
+    var three = 3;
+}
+three = "Three";
+// console.log(three);
+
 
 
 /*------------------------------------------------------------------------
@@ -72,51 +109,113 @@
     4. Variables defined with let have block scope => Variables declared inside a { } block cannot be accessed from outside the block
 */
 
-    // ================== Resuse =============================
-        let x = 30;
-        let y = 35;
-        let add = x + y;
+// ================== Resuse =============================
+let x = 30;
+let y = 35;
+let add = x + y;
 
-        // console.log( "befor: ", add );
+// console.log( "befor: ", add );
 
-        x = 36;
-        y = 44;
-        add = x + y;
+x = 36;
+y = 44;
+add = x + y;
 
-        // console.log( "after: ", add );
+// console.log( "after: ", add );
 
-    
-
-    // ================== Non redeclarable =============================
-        let firstName = "Miraj";
-        // let firstName = "Mahir"; // this will give an error
-        firstName = "Mahir"; // this is correct (we can't redeclare the variable, but we can resuse the variable)
+// ================== Non-redeclarable =======================
+let firstName = "Miraj";
+// let firstName = "Mahir"; // this will give an error
+firstName = "Mahir"; // this is correct (we can't redeclare the variable, but we can resuse the variable)
 
 
+// ================ Must be declared before use ===============
+d = 30;
+// let d; // error (can't access d before initialization)
 
-    // ================== Block scope =============================
-        // global scope
-        {
-            // block scope
-            let m = "Miraj";
-        }
-        // m can't be use here
-        // console.log(m); // error
+// console.log(d);
 
-        let k = "Khusbu"; // declared at global scope
-        {
-            // console.log(k); // can be access from block scope
-        }
 
-        // we can redeclare a global variable inside block scope.
-        let l = "love";
-        {
-            let l = "💚💚";
-            console.log(l); // 💚💚 
-        }
-        console.log(l); // love (global variable can be accessed)
+// ================== Block scope =============================
+// global scope
+{
+  // block scope
+  let m = "Miraj";
+}
+// m can't be use here
+// console.log(m); // error
+
+let k = "Khusbu"; // declared at global scope
+{
+  // console.log(k); // can be access from block scope
+}
+
+// we can redeclare a global variable inside block scope.
+let l = "love";
+{
+  let l = "💚💚";
+//   console.log(l); // 💚💚
+}
+// console.log(l); // love (global variable can be accessed)
+
+
+
+
+
 /*------------------------------------------------------------------------
                         const
 --------------------------------------------------------------------------
-    => If the value of a variable can not be changed then we use const keyword
+    1. If the value of a variable can not be changed then we use const keyword
+    2. Variables defined with const cannot be Redeclared.
+    3. Variables defined with const cannot be Reassigned.
+    4. Variables defined with const have Block Scope.
 */
+
+// ================== Non-redeclarable =============================
+const five = 5;
+// const five = 6;// error
+// console.log(five);
+
+
+// ================= Non-reassignable ==============================
+const six = 6;
+// six = "Six"; error
+// console.log(six);
+
+
+// ================== Block Scope ===================================
+const nine = 9;
+{
+    const seven = "Seven";
+    // console.log(nine); // global variable can be accessed from here
+}
+// can't be use
+// console.log(seven); // error
+
+
+
+/*---------------------------------------------------------------------
+                    Uses of variable
+-----------------------------------------------------------------------*/
+let fName = "Miraj";
+// alert("My name is: " + fName);
+
+// use propmt to store user's input
+// let lastName = prompt("Enter your last name: ");
+
+// use the input given by user
+// alert("Your last name is: " + lastName);
+
+
+/*----------------------------------------------------------------------
+                    Swap two given strings
+------------------------------------------------------------------------*/
+let str1 = "5";
+let str2 = "10";
+
+let temp = str1;
+str1 = str2;
+str2 = temp;
+
+console.log("str1 = ", str1); // str1 = "10"
+console.log("str2 = ", str2); // str2 = "5"
+

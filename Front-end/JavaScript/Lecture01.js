@@ -55,6 +55,15 @@ console.log("This is External JS");
     // alert("This message is using alert() method");
 
 
+
+/*----------------------------------------------------------------------
+                        promt() method
+------------------------------------------------------------------------*/
+    // This function displays a pop-up box over the current window that allows the user to enter input.
+    // prompt("Enter your name");
+
+
+
 /*----------------------------------------------------------------------
                     async and defer
 ------------------------------------------------------------------------*/
