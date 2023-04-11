@@ -136,7 +136,7 @@ d = 30;
 
 
 // ================== Block scope =============================
-// global scope
+// global scope => global variables can be accessed from every where of the code
 {
   // block scope
   let m = "Miraj";
@@ -155,7 +155,7 @@ let l = "love";
   let l = "💚💚";
 //   console.log(l); // 💚💚
 }
-// console.log(l); // love (global variable can be accessed)
+// console.log(l); // love (global variable accessed)
 
 
 
@@ -216,6 +216,6 @@ let temp = str1;
 str1 = str2;
 str2 = temp;
 
-console.log("str1 = ", str1); // str1 = "10"
-console.log("str2 = ", str2); // str2 = "5"
+// console.log("str1 = ", str1); // str1 = "10"
+// console.log("str2 = ", str2); // str2 = "5"
 
