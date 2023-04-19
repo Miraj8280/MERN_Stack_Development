@@ -1,0 +1,12 @@
+/* 
+There are three ways of inserting a style sheet
+    1. External CSS
+    2. Internal CSS
+    3. Inline CSS
+*/
+
+/* This is External CSS */
+p {
+    font-size: 20px;
+    color: red;
+}
