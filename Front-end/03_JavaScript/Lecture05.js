@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------
                       Arrays in JavaScript  
 -----------------------------------------------------------------------
-=> Create an Array - there are three methods
+=> Create an Array - there are three approaches
 => Array methods
         1. length => returns the length of the array (no. of array elements)
 
