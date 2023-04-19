@@ -20,7 +20,7 @@
     => Open google chrome and press ctrl+shift+J to open console.
     => A simple JavaScript program to print your name: console.log("Miraj Asraf");
     => Print sum of two numbers: console.log("5 + 10 = ", 5 + 10);
-    => JavaScript can be included in HTML file in two ways: i) Internal JS and ii) External JS
+    => JavaScript can be included in HTML file in two ways: i) Internal JS, ii) External JS and iii) Inline JS
         i) Internal JS:
             * Internal JS means the JavaScript code is written in the HTML file itself.
             * It is done by writing the JS code inside <script> tag and placing this in either the <head> or <body> tag as per the requirement.

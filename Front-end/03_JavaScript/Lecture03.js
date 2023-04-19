@@ -1,23 +1,41 @@
 /*------------------------------------------------------------------------
                     Strings in JavaScript
 --------------------------------------------------------------------------
-    1. Length of a string => length
+    1. Multi-line string => ``
 
-    2. Extract string part => 
+    2. Length of a string => length
+
+    3. Extract string part => 
         i) slice(start, end): extracts a part of a string and returns the extracted part in a new string and end not included
         ii) substring(start, end): similar to slice()
         iii) substr(start, length): similar to slice(), but the second parameter 'length' specifies the length of the extracted part
 
-    3. Replace the string content => replace(part1, part2) method replaces part1 with part2 in a string
+    4. Replace the string content => replace(part1, part2) method replaces part1 with part2 in a string
 
-    4. Convert to Upper and Lower case => 
+    5. Convert to Upper and Lower case => 
         i) toUpperCase()
         ii) toLowerCase()
 
-    5. Remove white spaces => trim() method removes whitespace from both sides of a string, but not removes the in b/w whitespaces.
+    6. Remove white spaces => trim() method removes whitespace from both sides of a string, but not removes the in b/w whitespaces.
 
-    6. Extract characters from string => charAt() method returns the character at a specified index (position) in a string.
+    7. Extract characters from string => charAt() method returns the character at a specified index (position) in a string.
 */
+
+// ======================== Multi-line string =================
+let singleLine = "This is single line string";
+
+/* 
+let multiLine = "This is
+multi-line string"; // this will give error
+*/
+
+let multiLine = `This is 
+a multi-line 
+string`;
+
+console.log(singleLine);
+console.log(multiLine);
+
 
 // ======================== length ============================
 let myName = "Miraj";

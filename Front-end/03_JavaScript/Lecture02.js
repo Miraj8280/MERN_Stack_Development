@@ -46,8 +46,14 @@
         2. Using let
         3. Using const
         4. Using nothing    
+
+    => Two steps process:
+                    1. Declaration (var, let, const)
+                    2. Assignment (assign a value)
 */
 
+var g; // declaration
+g = 10; // assignment
 /*------------------------------------------------------------------------
                         var
 --------------------------------------------------------------------------
