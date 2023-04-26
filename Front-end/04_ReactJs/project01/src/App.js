@@ -1,46 +1,35 @@
-import './App.css';
-import Heading, { College, College2, College3 } from './components/Heading';
-// import { College, College2, College3 } from './components/Heading';
-// we can import these along with the Heading as these are from same file
+import React from 'react'
+import Header from './components/Header'
+import './styles/App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Product from './components/Product';
 
-// we can use any name to import a component using 'as'
-import { District as Dist} from './components/Heading';
-// now we need to use Dist to call the component
+const App = () => {
+  return <Router>
+
+    <Header />
+
+    <Routes>
+
+      <Route path='/' element={<Home />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='*' element={<div>Page Not Found 404</div>} />
+
+      {/* To show a id from url we can use 'useParam' react hook 
+        Write anything after product/ it will show on the page as product id
+      */}
+      <Route path='/product/:id' element={<Product />} />
+
+    </Routes>
 
 
-const fullName = "Miraj Asraf";
-
-/* 
-function Address() {
-  return <h3>I am from Raiganj</h3>
-}
-*/
-
-// using arrow function 
-const Address = () => <h3>I am from Raiganj</h3>
 
 
-function App() {
-  return(
-    // to return multiple elements we need to wrap up inside a empty tag (fragments)
-    <>
-      <div className='App'>
-        <h1>Introduction to ReactJs</h1>
-      </div>
-
-      <div>
-        {/* use of JS inside HTML => JSX */}
-        <h2>I am {fullName} </h2>
-        <Address />
-      </div>
-
-      <Heading />
-      <College />
-      <College2 />
-      <College3 />
-      <Dist />
-    </>
-  )
+  </Router>
 }
 
-export default App;
+export default App
