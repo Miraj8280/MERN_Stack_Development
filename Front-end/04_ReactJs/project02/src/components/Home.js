@@ -10,7 +10,7 @@ import {
 const Home = () => {
   return (
     <>
-        <div className='home'>
+        <div className='home' id='home'>
             <main>
                 <h1>TechyMiraj</h1>
                 <p>Solve, Debug, Code...</p>
@@ -26,14 +26,14 @@ const Home = () => {
             </div>
         </div>
 
-        <div className="home3">
+        <div className="about" id='about'>
             <div>
                 <h1>Who we are ?</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius unde quidem et at adipisci natus error tempore cupiditate corrupti quo nesciunt, ratione illo aut eum ab nam. Ex repudiandae soluta veritatis voluptatibus ea itaque nam, dolorum alias deleniti blanditiis, facere, mollitia maiores voluptas quos in deserunt magni sequi distinctio provident voluptatum iusto recusandae ipsum harum explicabo! Mollitia harum quae blanditiis quasi, tempora iste odit atque nemo beatae ducimus reprehenderit possimus.</p>
             </div>
         </div>
 
-        <div className="home4">
+        <div className="brands" id='brands'>
             <div>
                 <h1>Brands</h1>
 
