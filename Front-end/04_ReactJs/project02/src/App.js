@@ -6,11 +6,13 @@ import {
 
 import Header from './components/Header';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import './styles/App.scss';
 import './styles/Header.scss';
 import './styles/Home.scss';
+import './styles/Contact.scss';
 import './styles/Footer.scss';
 
 function App() {
@@ -18,10 +20,10 @@ function App() {
     <Router>
 
       <Header />
-      <Home />
 
       <Routes>
-        <Route />
+        <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
 
       <Footer />
