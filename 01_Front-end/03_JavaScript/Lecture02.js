@@ -60,7 +60,7 @@ g = 10; // assignment
     1. It is a very old (1995 - 2015) keyword.
     2. Variables defined with var can be redeclared.
     3. Variables defined with var can be declared after use.
-    4. Variables defined with var can't have block scope => Variables declared inside a { } block can be accessed from outside the block
+    4. Variables defined with var can't have block scope => Variables declared inside a { } block can be accessed from outside the block. That's why we generally don't use var as if we change one variable inside a block, that change will effect the variable from other block also as it is not block scope.
 */
 
 // ================= Redeclarable ====================
@@ -225,3 +225,12 @@ str2 = temp;
 // console.log("str1 = ", str1); // str1 = "10"
 // console.log("str2 = ", str2); // str2 = "5"
 
+
+/*--------------------------------------------------------------------
+                    Use of console.table()
+----------------------------------------------------------------------*/
+const accountId = 123456;
+let accountHolder = "Miraj Asraf";
+var accountType = "Savings";
+
+console.table([accountId, accountHolder, accountType]);
