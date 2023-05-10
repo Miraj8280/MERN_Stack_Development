@@ -233,4 +233,75 @@ const accountId = 123456;
 let accountHolder = "Miraj Asraf";
 var accountType = "Savings";
 
-console.table([accountId, accountHolder, accountType]);
+// console.table([accountId, accountHolder, accountType]);
+
+
+/*----------------------------------------------------------------------
+                    Check type of a variable
+------------------------------------------------------------------------*/
+let score = 35;
+// console.log(typeof score);
+// Or,
+// console.log(typeof(score));
+
+score = "60";
+// console.log(typeof(score));
+
+
+
+/*----------------------------------------------------------------------
+                    Data type Conversion
+------------------------------------------------------------------------*/
+// String to Number
+let thirtyFive = "35";
+let numThirtyFive = Number(thirtyFive);
+
+// console.log(numThirtyFive);
+// console.log(typeof(numThirtyFive));
+
+
+let thirtySix = "36abcd";
+let numThirtySix = Number(thirtySix);
+
+// console.log(numThirtySix);  // NaN => Not a Number
+// console.log(typeof(numThirtySix));
+
+
+// Others to Number
+let other1 = null;
+let numOther1 = Number(other1);
+// console.log(numOther1); // 0
+
+let other2 = undefined;
+let numOther2 = Number(other2);
+// console.log(numOther2); // NaN
+
+let other3 = true;
+let numOther3 = Number(other3);
+// console.log(numOther3); // 1
+
+
+// Something to Boolean
+let isTrue = 1;
+let boolIsTrue = Boolean(isTrue);
+// console.log(boolIsTrue); // true
+
+let isLoggedIn = "Miraj";
+let boolIsLoggedIn = Boolean(isLoggedIn);
+// console.log(boolIsLoggedIn); // true
+
+let isLoggedOut = "";
+let boolIsLoggedOut = Boolean(isLoggedOut);
+// console.log(boolIsLoggedOut); // false
+
+
+// Something to String
+let testNum = 35;
+let testStr = String(testNum);
+// console.log(testStr);
+// console.log(typeof(testStr));
+
+
+
+
+
