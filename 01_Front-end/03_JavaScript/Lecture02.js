@@ -35,6 +35,7 @@
                     }; 
 */
 
+
 /*------------------------------------------------------------------------
                     Variables in JavaScript
 --------------------------------------------------------------------------
@@ -60,7 +61,7 @@ g = 10; // assignment
     1. It is a very old (1995 - 2015) keyword.
     2. Variables defined with var can be redeclared.
     3. Variables defined with var can be declared after use.
-    4. Variables defined with var can't have block scope => Variables declared inside a { } block can be accessed from outside the block. That's why we generally don't use var as if we change one variable inside a block, that change will effect the variable from other block also as it is not block scope.
+    4. Variables defined with var can't have block scope => Variables declared inside a { } block can be accessed from outside the block. That's why we generally don't use var as if we change one variable inside a block, that change will effect the same variable from outside of the block as it is not block scope.
 */
 
 // ================= Redeclarable ====================
@@ -247,6 +248,26 @@ let score = 35;
 score = "60";
 // console.log(typeof(score));
 
+/*-----------------
+    Special cases
+-------------------*/
+// console.log(typeof(null)); // object
+// console.log(typeof(undefined)); // undefined
+// console.log(typeof(NaN)); // number
+
+let myObj = {
+    name: "Miraj",
+    roll: 36,
+    dept: "CSE"
+}
+// console.log(typeof(myObj)); // object
+
+let myName = function() {
+
+    console.log("Miraj Asraf");
+}
+// myName();
+// console.log(typeof(myName)); // function
 
 
 /*----------------------------------------------------------------------
@@ -300,6 +321,26 @@ let testNum = 35;
 let testStr = String(testNum);
 // console.log(testStr);
 // console.log(typeof(testStr));
+
+/*--------------
+    Summerize
+---------------*/
+/*
+To Number:
+    1. "35" => 35
+    2. "35abc" => NaN
+    3. true => 1
+    4. false => 0
+    5. undefined => NaN
+    6. null => 0
+
+To Boolean:
+    7. 1 => true
+    8. 0 => false
+    9. "" => false
+    10. "miraj" = true
+
+*/
 
 
 

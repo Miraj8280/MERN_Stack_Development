@@ -96,6 +96,19 @@ let Decrement = thirty--;
     // console.log((++m1)++); // compilation error
 
 
+/*------------------------------------------------------------------
+                Swap two numbers without using extra variable
+------------------------------------------------------------------*/
+    let x = 20;
+    let y = 30;
+
+    x = x + y; // 20 + 30 = 50
+    y = x - y; // 50 - 30 = 20
+    x = x - y; // 50 - 20 = 30
+
+    console.log(`x: ${x}, y: ${y}`);
+
+
 /*-----------------------------------------------------------------
                        = vs == vs ===
 ------------------------------------------------------------------
@@ -113,9 +126,49 @@ let Decrement = thirty--;
 // Assignment operator
 let p1 = 20;
 let p2 = "20";
-
+ 
 // Comparison operator (==)
 console.log(p1 == p2); // true (checks only the values, not the datatype)
 
 // // Comparison operator (===)
 console.log(p1 === p2); // false (checks the values as well as the datatypes also)
+
+/*----------------------------------------------------------------------
+                            Some Special Cases
+-----------------------------------------------------------------------*/
+// console.log("Some special cases for null : ");
+// console.log(null > 0); // false
+// console.log(null < 0); // false
+// console.log(null >= 0); // true
+// console.log(null <= 0); // true
+// console.log(null == 0); // false
+// console.log(null === 0); // false
+
+// console.log("Some special cases for undefined : ");
+// console.log(undefined > 0); // false
+// console.log(undefined < 0); // false
+// console.log(undefined >= 0); // false
+// console.log(undefined <= 0); // false
+// console.log(undefined == 0); // false
+// console.log(undefined === 0); // false
+
+// console.log("Some special cases for NaN : ");
+// console.log(NaN > 0); // false
+// console.log(NaN < 0); // false
+// console.log(NaN >= 0); // false
+// console.log(NaN <= 0); // false
+// console.log(NaN == 0); // false
+// console.log(NaN === 0); // false
+
+
+/*-----------------------------------------------------------------------
+                        Conversion in Operators
+-------------------------------------------------------------------------*/
+// console.log(1 + 2); // 3
+// console.log("1" + 2); // 12 (String concatenation)
+// console.log(1 + "2"); // 12 (String concatenation)
+// console.log("1" + "2"); // 12 (String concatenation)
+// console.log("1" + 2 + 3); // 123 (String concatenation)
+// console.log(1 + 2 + "3"); // 33 (first two values added and then concatenated)
+// console.log("1" + 2 + "3"); // 123 (String concatenation)
+// console.log(1 + "2" + 3); // 123 (String concatenation)
