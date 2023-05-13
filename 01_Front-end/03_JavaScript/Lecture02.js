@@ -1,29 +1,33 @@
 /*------------------------------------------------------------------------
                     Data Types in JavaScript
 --------------------------------------------------------------------------
-    => There are 8 data types in JS
-        1. String : "Miraj Asraf"
+    => There are two types of data types in JS
+        1. Primitive 
+        2. Non-primitive
 
-        2. Number : Javascript numbers are always one type: double (64-bit floating point).
-                    20, 36, 2.5, 7e5 (= 700000), 7e-2 (= 0.07)
+        Primitive: 7 types - 1. String, 2. Number, 3. Boolean, 4. null, 5. undefined, 6. Symbol, 7. BigInt
+            1. String : "Miraj Asraf"
 
-                    In C++ we have many number types:
-                    i) Whole numbers (integers): 
-                        -> byte (8-bit)
-                        -> short (16-bit)
-                        -> int (32-bit)
-                        -> long (64-bit)
+            2. Number : Javascript numbers are always one type: double (64-bit floating point).
+                        20, 36, 2.5, 7e5 (= 700000), 7e-2 (= 0.07)
 
-                    ii) Real numbers (floating-point): 
-                        -> float (32-bit)
-                        -> double (64-bit)
-                
-        3. BigInt : Used to store too big integers 
-                    BigInt("123456789012345678901234567890")
+                        In C++ we have many number types:
+                        i) Whole numbers (integers): 
+                            -> byte (8-bit)
+                            -> short (16-bit)
+                            -> int (32-bit)
+                            -> long (64-bit)
 
-        4. Boolean : true, false
+                        ii) Real numbers (floating-point): 
+                            -> float (32-bit)
+                            -> double (64-bit)
+                    
+            3. BigInt : Used to store too big integers 
+                        BigInt("123456789012345678901234567890")
 
-    => There are some object data type also:
+            4. Boolean : true, false
+
+    => Non-primitive(reference):
         1. Array :  [2, 4, 6, 8, 10] 
                     ["Mobarak", "Moslema", "Mehanaj", "Miraj"]
         
@@ -32,7 +36,12 @@
                         name : "Miraj",
                         roll : 36,
                         dept : CSE
-                    }; 
+                    };
+        
+        3. Function: 
+                    funtion () {
+
+                    }
 */
 
 
@@ -342,7 +351,54 @@ To Boolean:
 
 */
 
+/*------------------------------------------------------------------------
+                        Is JavaScript dynamic language?
+---------------------------------------------------------------------------*/
+/*
+-> Yes, JavaScript is a dynamic language. 
+-> It is dynamically typed, meaning that variables do not have a fixed data type and can change their type during runtime. 
+-> Additionally, JavaScript allows for dynamic memory allocation, meaning that variables can be created and destroyed on the fly as needed. 
+-> JavaScript also supports other features typically associated with dynamic languages, such as higher-order functions and closures.
+*/
+
+let aboutMe = "Miraj Asraf"; // string data type
+aboutMe = 36; // number data type
+// console.log(aboutMe);
 
 
+/*-------------------------------------------------------------------------
+                        Memory - Stack and Heap
+---------------------------------------------------------------------------*/
+/*
+    1. Stack memory used for: Primitive data types
+        -> We get a copy of the original value
 
+    2. Heap memory used for => Non-primitive data types
+        -> We get the reference of the original value
+*/
 
+// Primitive data type => stored in Stack
+let currentAddress = "Jalpaiguri";
+let permanentAddress = currentAddress; // copy of currentAddress
+
+// it will only change the copy of the copy of the original value
+permanentAddress = "Raiganj";
+
+// console.log(`currentAddress: ${currentAddress} \npermanentAddress: ${permanentAddress}`);
+// original value will not get effected
+
+// Non-primitive data type => stored in Heap
+let userOne = {
+    email: "miraj@google.com",
+    id: 1234567
+}
+
+let userTwo = userOne; // reference of original value (userOne)
+
+// to access items of an object, use dot operator
+userTwo.id = 567890;
+
+console.log(`userOne: ${userOne.id} \nuserTwo: ${userTwo.id}`);
+// original value effected
+// origianl value is also changed
+// as userTwo directly referencing to userOne and it is not a copy of that
