@@ -5,8 +5,7 @@
         1. Primitive 
         2. Non-primitive
 
-        @ Primitive: 7 types => 1. String, 2. Number, 3. Boolean, 4. null, 5. undefined, 6. Symbol, 7. BigInt
-
+        Primitive: 7 types - 1. String, 2. Number, 3. Boolean, 4. null, 5. undefined, 6. Symbol, 7. BigInt
             1. String : "Miraj Asraf"
 
             2. Number : Javascript numbers are always one type: double (64-bit floating point).
@@ -28,9 +27,7 @@
 
             4. Boolean : true, false
 
-
-        @ Non-primitive(reference):
-
+    => Non-primitive(reference):
         1. Array :  [2, 4, 6, 8, 10] 
                     ["Mobarak", "Moslema", "Mehanaj", "Miraj"]
         
@@ -58,7 +55,7 @@
         1. Using var
         2. Using let
         3. Using const
-        4. Nothing    
+        4. Using nothing    
 
     => Two steps process:
                     1. Declaration (var, let, const)
@@ -67,9 +64,6 @@
 
 var g; // declaration
 g = 10; // assignment
-
-
-
 /*------------------------------------------------------------------------
                         var
 --------------------------------------------------------------------------
@@ -87,6 +81,7 @@ var sum = a + b;
 var a = 30;
 var b = 50;
 var sum = a + b;
+
 // console.log(sum);
 
 
@@ -99,17 +94,19 @@ var z;
 var u;
 
 // console.log(mul);
+
 var mul;
 
 
 // =============== Not block scope ======================
-//--- global scope => global variables can be accessed from every where of the code
+// global scope
 {
-    //--- block scope
+    // block scope
     var two = 2;
 }
 // can be use here
 // console.log(two);
+
 
 {
     var three = 3;
@@ -132,15 +129,16 @@ three = "Three";
 let x = 30;
 let y = 35;
 let add = x + y;
+
 // console.log( "befor: ", add );
 
 x = 36;
 y = 44;
 add = x + y;
+
 // console.log( "after: ", add );
 
-
-// ================== Non-redeclarable ======================
+// ================== Non-redeclarable =======================
 let firstName = "Miraj";
 // let firstName = "Mahir"; // this will give an error
 firstName = "Mahir"; // this is correct (we can't redeclare the variable, but we can resuse the variable)
@@ -149,13 +147,14 @@ firstName = "Mahir"; // this is correct (we can't redeclare the variable, but we
 // ================ Must be declared before use ===============
 d = 30;
 // let d; // error (can't access d before initialization)
+
 // console.log(d);
 
 
 // ================== Block scope =============================
-//--- global scope
+// global scope => global variables can be accessed from every where of the code
 {
-  //--- block scope
+  // block scope
   let m = "Miraj";
 }
 // m can't be use here
@@ -174,19 +173,14 @@ let l = "love";
 }
 // console.log(l); // love (global variable accessed)
 
-// we can modify a global variable inside block scope.
-let j = "Jishu";
-{
-    j = "Jishan";
-}
-// console.log(j); // Jishan (modified)
+
 
 
 
 /*------------------------------------------------------------------------
                         const
 --------------------------------------------------------------------------
-    1. If the value of a variable can not be changed then we use const keyword.
+    1. If the value of a variable can not be changed then we use const keyword
     2. Variables defined with const cannot be Redeclared.
     3. Variables defined with const cannot be Reassigned.
     4. Variables defined with const have Block Scope.
@@ -288,7 +282,7 @@ let myName = function() {
 /*----------------------------------------------------------------------
                     Data type Conversion
 ------------------------------------------------------------------------*/
-// 1. String to Number
+// String to Number
 let thirtyFive = "35";
 let numThirtyFive = Number(thirtyFive);
 
@@ -303,7 +297,7 @@ let numThirtySix = Number(thirtySix);
 // console.log(typeof(numThirtySix));
 
 
-// 2. Others to Number
+// Others to Number
 let other1 = null;
 let numOther1 = Number(other1);
 // console.log(numOther1); // 0
@@ -317,7 +311,7 @@ let numOther3 = Number(other3);
 // console.log(numOther3); // 1
 
 
-// 3. Something to Boolean
+// Something to Boolean
 let isTrue = 1;
 let boolIsTrue = Boolean(isTrue);
 // console.log(boolIsTrue); // true
@@ -331,11 +325,11 @@ let boolIsLoggedOut = Boolean(isLoggedOut);
 // console.log(boolIsLoggedOut); // false
 
 
-// 4. Something to String
+// Something to String
 let testNum = 35;
 let testStr = String(testNum);
-// console.log(testStr); // 35
-// console.log(typeof(testStr)); // string
+// console.log(testStr);
+// console.log(typeof(testStr));
 
 /*--------------
     Summerize
@@ -359,11 +353,12 @@ To Boolean:
 
 /*------------------------------------------------------------------------
                         Is JavaScript dynamic language?
----------------------------------------------------------------------------
-@ Yes, JavaScript is a dynamic language. 
-@ It is dynamically typed, meaning that variables do not have a fixed data type and can change their type during runtime. 
-@ Additionally, JavaScript allows for dynamic memory allocation, meaning that variables can be created and destroyed on the fly as needed. 
-@ JavaScript also supports other features typically associated with dynamic languages, such as higher-order functions and closures.
+---------------------------------------------------------------------------*/
+/*
+-> Yes, JavaScript is a dynamic language. 
+-> It is dynamically typed, meaning that variables do not have a fixed data type and can change their type during runtime. 
+-> Additionally, JavaScript allows for dynamic memory allocation, meaning that variables can be created and destroyed on the fly as needed. 
+-> JavaScript also supports other features typically associated with dynamic languages, such as higher-order functions and closures.
 */
 
 let aboutMe = "Miraj Asraf"; // string data type
@@ -375,34 +370,35 @@ aboutMe = 36; // number data type
                         Memory - Stack and Heap
 ---------------------------------------------------------------------------*/
 /*
-    1. Stack memory used for: Primitive data types.
-        -> We get a copy of the original value.
+    1. Stack memory used for: Primitive data types
+        -> We get a copy of the original value
 
-    2. Heap memory used for => Non-primitive data types.
-        -> We get the reference of the original value.
+    2. Heap memory used for => Non-primitive data types
+        -> We get the reference of the original value
 */
 
-// Primitive data type => stored in Stack.
+// Primitive data type => stored in Stack
 let currentAddress = "Jalpaiguri";
-let permanentAddress = currentAddress; // copy of currentAddress.
+let permanentAddress = currentAddress; // copy of currentAddress
 
-// it will only change the copy of the original value.
+// it will only change the copy of the copy of the original value
 permanentAddress = "Raiganj";
 
 // console.log(`currentAddress: ${currentAddress} \npermanentAddress: ${permanentAddress}`);
-// original value will not get affected.
+// original value will not get effected
 
-// Non-primitive data type => stored in Heap.
+// Non-primitive data type => stored in Heap
 let userOne = {
     email: "miraj@google.com",
     id: 1234567
 }
 
-let userTwo = userOne; // reference of original value (userOne).
+let userTwo = userOne; // reference of original value (userOne)
 
-// to access items of an object, use dot operator.
+// to access items of an object, use dot operator
 userTwo.id = 567890;
 
 // console.log(`userOne: ${userOne.id} \nuserTwo: ${userTwo.id}`);
-// origianl value is also changed.
-// as userTwo directly referencing to userOne and it is not a copy of that.
+// original value effected
+// origianl value is also changed
+// as userTwo directly referencing to userOne and it is not a copy of that

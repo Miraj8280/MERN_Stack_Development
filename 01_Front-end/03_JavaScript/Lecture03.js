@@ -33,15 +33,15 @@ let multiLine = `This is
 a multi-line 
 string`;
 
-console.log(singleLine);
-console.log(multiLine);
+// console.log(singleLine);
+// console.log(multiLine);
 
 
 // ======================== length ============================
-let myName = "Miraj";
+let myFirstName = "Miraj";
 // console.log(myName.length);
 
-let len = myName.length;
+let len = myFirstName.length;
 // console.log(len);
 
 

@@ -66,17 +66,22 @@ let Decrement = thirty--;
 /*------------------------------------------------------------------------
                 Problems on Increment & Decrement operators
 --------------------------------------------------------------------------*/
+/*
 // Q.1) What will be the value of z ?
     let p = 5, q = 10, r;
     r = p++ + ++q; // here, p = 5, q = 11, so r = 16
     console.log(r); // 16
 
+*/
 
+/*
 // Q.2) What will be the output of the following code ?
     let s = 1, t = 1, w = 1;
     console.log(++s + ++s+s++, s++ + ++t, ++w + w++ + s++);
     //           2  +  3 + 3    4 + 2      2 + 2 + 5  => 8 6 9
+*/
 
+/*
 // Q.3) What will be the value of 
     let n1 = 10;
     let n2, n3;
@@ -89,16 +94,19 @@ let Decrement = thirty--;
     n2 -= n3; // n2 = n2 - n3 => 11 - 11 = 0
 
     console.log(n2); // 0
+*/
 
-
+/*
 // Q.4) What will be the output of the following program ?
     let m1 = 3;
     // console.log((++m1)++); // compilation error
+*/
 
 
 /*------------------------------------------------------------------
                 Swap two numbers without using extra variable
 ------------------------------------------------------------------*/
+    /*
     let x = 20;
     let y = 30;
 
@@ -107,6 +115,7 @@ let Decrement = thirty--;
     x = x - y; // 50 - 20 = 30
 
     console.log(`x: ${x}, y: ${y}`);
+    */
 
 
 /*-----------------------------------------------------------------
@@ -128,10 +137,10 @@ let p1 = 20;
 let p2 = "20";
  
 // Comparison operator (==)
-console.log(p1 == p2); // true (checks only the values, not the datatype)
+// console.log(p1 == p2); // true (checks only the values, not the datatype)
 
 // // Comparison operator (===)
-console.log(p1 === p2); // false (checks the values as well as the datatypes also)
+// console.log(p1 === p2); // false (checks the values as well as the datatypes also)
 
 /*----------------------------------------------------------------------
                             Some Special Cases

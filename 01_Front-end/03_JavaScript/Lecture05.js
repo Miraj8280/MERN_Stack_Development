@@ -163,9 +163,3 @@ numbers.sort(function(a, b) {
 
     The comparison function (a, b) => a - b compares each pair of elements a and b in the array. If the result is negative, it means a should be sorted before b, and if the result is positive, it means b should be sorted before a. By subtracting b from a, we achieve ascending order sorting.
 */
-
-
-
-
-
-
