@@ -20,7 +20,7 @@ const month = dateObj.getMonth(); // 0-based indexing (0 - 11)
 // console.log(month); // 5 (June)
 
 const day = dateObj.getDate();
-// console.log(date); // 25
+// console.log(day); // 25
 
 const hour = dateObj.getHours();
 // console.log(hour); // 11
