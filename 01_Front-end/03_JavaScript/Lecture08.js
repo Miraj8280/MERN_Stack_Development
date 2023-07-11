@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-                    Objects in JavaScript
+                    Objects in JavaScript - I
 ---------------------------------------------------------------------
 @ Objects are a way to store and organize related data.
 @ They are like containers that can hold various piecies of information called properties.
@@ -75,3 +75,33 @@ const obj = {
 // To access the value of a symbol property, you need to use square brackets []
 // console.log(obj[mySymbol]);
 
+// Functions within object
+const myObj = {
+    firstName: "Miraj",
+    sayHello: function() {
+        console.log("Hello, " + this.firstName + "!");
+    }
+};
+
+// myObj.sayHello();
+
+// pass arguments
+const myObj2 = {
+    firstName: "Khusbu",
+    greet: function(message) {
+        console.log(message + ", " + this.firstName);
+    }
+}
+
+let message = "Good morning";
+// myObj2.greet(message);
+
+// Shorthand method syntax, introduced in ES6
+const myObj3 = {
+    name: "Mahir",
+    sayHello() {
+        console.log("Hello, " + this.name + "!");
+    }
+}
+
+// myObj3.sayHello();
