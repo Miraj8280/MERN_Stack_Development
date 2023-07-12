@@ -76,14 +76,14 @@ const obj = {
 // console.log(obj[mySymbol]);
 
 // Functions within object
-const myObj = {
+const myObject = {
     firstName: "Miraj",
     sayHello: function() {
         console.log("Hello, " + this.firstName + "!");
     }
 };
 
-// myObj.sayHello();
+// myObject.sayHello();
 
 // pass arguments
 const myObj2 = {
