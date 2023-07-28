@@ -13,9 +13,8 @@
 function sayMyName() {
     console.log("Miraj");
 }
-// sayMyName    ---> This is reference of the function
-// sayMyName()  ---> This is function call (invocation)
-// sayMyName();
+// sayMyName    // ---> This is reference of the function
+// sayMyName()  // ---> This is function call (invocation)
 
 /* 2. Function expression 
    @ Assigns a function to a variable. 
@@ -39,7 +38,7 @@ const goat = () => {
 // goat();
 
 const food = (nonVeg) => `Your favorite non-veg food is ${nonVeg}`;
-// console.log(food("chicken biriyani"));
+// console.log(food("chicken biryani"));
 
 /* 4. Parameters and Arguments
     @ Functions can take parameters, which act as placeholders for values passed into the function. 

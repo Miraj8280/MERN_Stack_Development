@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
                     Objects in JavaScript - III
 --------------------------------------------------------------------- 
-@ Destructuring is a feature in JavaScript that allows you to extract values from objects and arrays into distinct variables.
+@ Destructuring is a feature in JavaScript that allows us to extract values from objects into distinct variables.
 @ Destructuring an object:
     const {property_1, property_2, ...} = object_name;
 */
@@ -16,7 +16,7 @@ const student = {
 
 // Destructure the Object student
 // Extract values from the object and assign them to variables with the same name as the object's property
-/*
+/* 
 const { name } = student;
 // console.log(name);
 
@@ -57,7 +57,7 @@ const { name: firstName, lastName = "Asraf", roll, dept, degree } = student;
 // Nested object destructuring
 const teacher = {
     name: {
-        firstName: "Mobarak",
+        firstname: "Mobarak",
         lastName: "Ali"
     },
     dept: "CSE",
@@ -69,7 +69,7 @@ const teacher = {
     } 
 };
 
-const { name: { firstName, lastName }, dept, age, address: { city, dist, state } } = teacher;
+const { name: { firstname, lastName }, dept, age, address: { city, dist, state } } = teacher;
 
 // console.log(firstName);
 // console.log(age);
